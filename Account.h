@@ -7,9 +7,9 @@ using namespace std;
 
 // Constants
 int MIN_DATE = 1,
-	MAX_DATE = 31,
-	MIN_MONTH = 1,
-	MAX_MONTH = 12;
+    MAX_DATE = 31,
+    MIN_MONTH = 1,
+    MAX_MONTH = 12;
 
 class Account
 {
@@ -42,22 +42,6 @@ private:
 	double balance;			// Account balance
 	int transactCount;		// The number of transactions made
 	
-	void validateDay()
-	{
-		if (day < MIN_DATE || day > MAX_DATE)
-		{
-			throw InvalidDay();
-		}
-	}
-
-	void validateMonth()
-	{
-		if (month < MIN_MONTH || month > MAX_MONTH)
-		{
-			throw InvalidMonth();
-		}
-	}
-
 public:
 
 	//***********************************************************************
@@ -68,6 +52,13 @@ public:
 
 	class InvalidMonth
 	{};
+	
+	//***********************************************************************
+	// Exception functions defined in cpp					*
+	//***********************************************************************
+	void validateDay();
+	
+	void validateMonth();
 
 
 	//***********************************************************************
@@ -128,7 +119,7 @@ public:
 		t.transactDate.year = y;
 
 		validateDay();
-		validateMonth;
+		validateMonth();
 	}
 
 	void deposit(Transaction t);	// Defined in Account.cpp
