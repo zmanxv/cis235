@@ -4,7 +4,7 @@
 # sudo apt-get install mysql-server mysql-client
 # sudo apt-get install libmysqlcppconn-dev
 
-# g++ -c -I/usr/include/cppconn demo-create-data.cpp 
-# g++ -o demo-create-data demo-create-data.o -L/usr/lib/mysql -lmysqlcppconn
+# g++ -c -I/usr/include/cppconn create_data.cpp 
+# g++ -o create_data create_data.o -L/usr/lib/mysql -lmysqlcppconn
 
 # make in src directory
