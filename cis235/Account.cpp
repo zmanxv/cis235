@@ -1,6 +1,12 @@
 #include "Account.h"
 #include <string>
 
+// Constants
+int MIN_DATE = 1,
+    MAX_DATE = 31,
+    MIN_MONTH = 1,
+    MAX_MONTH = 12;
+
 using namespace std;
 
 //***********************************************************************
