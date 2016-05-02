@@ -27,6 +27,7 @@ void login()
 
   cin >> username;
 
+	// change to user.input == USERNAME1
   if(username == USERNAME1)
 
     {
