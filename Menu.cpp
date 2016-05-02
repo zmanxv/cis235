@@ -7,12 +7,28 @@
 
 using namespace std;
 
+void login();
 void menu();
+
+// we need a linked list in the program (requirement) recommended binary file
 
 int main()
 {
+	login();
 	menu();
     return 0;
+}
+
+void login()
+{
+	// display options to select which user
+	// based on user selected, load that file
+	
+	// Display menu with two users
+	// If user 1, enter 1
+	// If user 2, enter 2
+	
+	// include looping for correct user input
 }
 
 void menu()
