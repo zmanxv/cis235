@@ -1,0 +1,117 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+const int EXIT_OPTION = 6;
+
+void login();
+void displayMenu();
+void addAccount();
+void doTransaction();
+void viewHistory();
+void searchHistory();
+void getSummary();
+
+
+int main()
+{
+	int userSelection,
+		menuSelection;
+
+	do 
+	{
+		login();
+		cout << "Please select a user (1 or 2): ";
+		cin >> userSelection;
+
+		// password validation?
+		//load file based on user selected into a linked list?
+	} while (userSelection == 1 || userSelection == 2);
+	
+
+	do
+	{
+		displayMenu();
+		cout << "Please enter your selection: ";
+		cin >> menuSelection;
+
+		while (menuSelection <= 0 || menuSelection > EXIT_OPTION)
+		{
+			cout << "Please select an option 1 - " << EXIT_OPTION << ": ";
+			cin >> menuSelection;
+		}
+
+		switch (menuSelection)
+		{
+		case 1: // call addAccount function
+			break;
+		case 2: // call doTransaction function
+			break;
+		case 3: // call viewHistory function
+			break;
+		case 4: // call searchHistory function
+			break;
+		case 5: // call getSummary function
+			break;
+		case 6: // write new information to file?
+			// or does this need to be done outside of this do/while loop?
+		}
+
+	} while (menuSelection != EXIT_OPTION);
+		
+	return 0;
+}
+
+void login()
+{
+	// display options to select which user
+	// based on user selected, load that file
+
+	// Display menu with two users
+	// If user 1, enter 1
+	// If user 2, enter 2
+
+}
+
+void displayMenu()
+{
+	cout << "1. Add an account" << endl;
+	cout << "2. Input a new transaction to an account" << endl;
+	cout << "3. View transaction history" << endl;
+	cout << "4. Search for a transaction" << endl;
+	cout << "5. Get a summary of all accounts" << endl;
+	cout << EXIT_OPTION << ". Save and exit" << endl;
+}
+
+void addAccount()
+{
+	// create a new Account object within this function? (ie, Checking, Savings, Money Market)
+}
+
+void doTransaction()
+{
+	// can we create a menu that will allow the user to select from one of their
+	// user created accounts? If we just want pre-populated account types, then
+	// we may not need the first option on our menu
+
+	// allow user to select which account
+	// select deposit or withdrawal
+	// call appropriate class functions
+}
+
+void viewHistory()
+{
+	// cout the contents of the linked list?
+}
+
+void searchHistory()
+{
+	// allow user to search through the linked list loaded into memory
+	// by date, description, or amount?
+}
+
+void getSummary()
+{
+	// display the current balance in the user's accounts
+}
